@@ -4,8 +4,9 @@ from math import pi,cos,sin,tan,atan
 import statistics
 import matplotlib.pyplot as plt
 
-
-
+# A csv data processing utility
+# Reads csv files, defines selected fields, and convert to overlayed graphical plots to compare results, and writes new file with statistics
+# Written by Jyri Hamalainen, https://thehub.io/startups/100ximpact
 # Define a generic function to read a file and create a list of floats from a field
 # Initialise Empty Lists to '0,0,..' each time function is called to Read in Data
 
