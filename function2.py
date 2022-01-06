@@ -51,7 +51,7 @@ c = statistics.mean(CreateFloatList(fname1,field_to_process1))
 
 #############################
 #Read in first FILE 2nd FIELD
-#Coil Middle test suite 1
+#Coil Middle test suite 2A
 #############################
 #fieldname to process 
 field_to_process2='Load'
@@ -64,7 +64,7 @@ print("\n")
 
 #############################
 #Read in 2nd FILE 1st FIELD
-#Coil Middle test suite 2
+#Coil Middle test suite 2B
 #############################
 #fieldname to process 
 field_to_process3='1/L'
