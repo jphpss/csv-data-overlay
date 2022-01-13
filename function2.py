@@ -141,7 +141,7 @@ print("----------------------------------------------")
 print(stat3," of ",fname4," ",field_to_process4," = ", i)
 
 # Plot statistics
-x=CreateFloatList(fname1,field_to_process2)
+x=CreateFloatList(fname2,field_to_process2)
 y=CreateFloatList(fname1,field_to_process1)
 
 y1=CreateFloatList(fname3,field_to_process3)
@@ -239,7 +239,7 @@ with open('fieldfile7.csv', 'w') as csvfile:
     csvfile.write(str("Fields analysed = "))
     csvfile.write(str(","))    
     writer.writeheader()    
-    csvfile.write(str("\n"))
+    #csvfile.write(str("\n"))
 
     csvfile.write(str(fname1))
     
@@ -257,9 +257,13 @@ with open('fieldfile7.csv', 'w') as csvfile:
 
     csvfile.write(str(","))
     csvfile.write(str(y2))
-    csvfile.write(str(","))    
-      
+    csvfile.write(str("\n"))    
+
+    csvfile.write(str(fname2))  
+
+    csvfile.write(str(","))
     csvfile.write(str(x))
+       
     
 
 
