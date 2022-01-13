@@ -4,9 +4,11 @@ from math import pi,cos,sin,tan,atan
 import statistics
 import matplotlib.pyplot as plt
 
+
 # A csv data processing utility
 # Reads csv files, defines selected fields, and convert to overlayed graphical plots to compare results, and writes new file with statistics
 # Written by Jyri Hamalainen, https://thehub.io/startups/100ximpact
+
 # Define a generic function to read a file and create a list of floats from a field
 # Initialise Empty Lists to '0,0,..' each time function is called to Read in Data
 
@@ -51,7 +53,7 @@ c = statistics.mean(CreateFloatList(fname1,field_to_process1))
 
 #############################
 #Read in first FILE 2nd FIELD
-#Coil Middle test suite 2A
+#Coil Middle test suite 2a
 #############################
 #fieldname to process 
 field_to_process2='Load'
@@ -64,7 +66,7 @@ print("\n")
 
 #############################
 #Read in 2nd FILE 1st FIELD
-#Coil Middle test suite 2B
+#Coil Middle test suite 2b
 #############################
 #fieldname to process 
 field_to_process3='1/L'
@@ -186,32 +188,42 @@ with open('fieldfile7.csv', 'w') as csvfile:
     csvfile.write(str("---"))
     csvfile.write(str("\n"))
     csvfile.write(str("Standard Deviation = "))
+    csvfile.write(str(","))    
     csvfile.write(str(a))
-    csvfile.write(str("_______"))
+    csvfile.write(str(","))    
     csvfile.write(str(d))
-    csvfile.write(str("_______"))
+    csvfile.write(str(","))
     csvfile.write(str(g))
     csvfile.write(str("\n"))
     csvfile.write(str("\n"))
     csvfile.write(str("Median             = "))
+    csvfile.write(str(","))
     csvfile.write(str(b))
-    csvfile.write(str("_______"))
+    csvfile.write(str(","))
+       
     csvfile.write(str(e))
-    csvfile.write(str("_______"))
+    csvfile.write(str(","))
+        
     csvfile.write(str(h))
-    csvfile.write(str("  % Diff = "))
+    csvfile.write(str("\n"))    
+    csvfile.write(str("  % Diff (a to b) (a to c) = "))
+       
+    csvfile.write(str(","))
     csvfile.write(str(median_diff1))
     csvfile.write(str(" , "))
     csvfile.write(str(median_diff2))
     
     csvfile.write(str("\n"))
     csvfile.write(str("Mean               = "))
+    csvfile.write(str(","))    
     csvfile.write(str(c))
-    csvfile.write(str("_______"))
+    csvfile.write(str(","))
     csvfile.write(str(f))
-    csvfile.write(str("_______"))
+    csvfile.write(str(","))
     csvfile.write(str(i))
-    csvfile.write(str("  % Diff = "))
+    csvfile.write(str("\n"))
+    csvfile.write(str("  % Diff (a to b) (a to c) = "))
+    csvfile.write(str(","))
     csvfile.write(str(mean_diff1))
     csvfile.write(str(" , "))
     csvfile.write(str(mean_diff2))
@@ -225,27 +237,30 @@ with open('fieldfile7.csv', 'w') as csvfile:
    
     csvfile.write(str("\n")) 
     csvfile.write(str("Fields analysed = "))
-    writer.writeheader()
+    csvfile.write(str(","))    
+    writer.writeheader()    
     csvfile.write(str("\n"))
+
     csvfile.write(str(fname1))
-    csvfile.write(str("\n"))
-    csvfile.write(str("\n"))
+    
+    csvfile.write(str(","))
     csvfile.write(str(y))
     csvfile.write(str("\n"))
-    csvfile.write(str("\n"))
+    
     csvfile.write(str(fname3))
-    csvfile.write(str("\n"))
-    csvfile.write(str("\n"))
+    
+    csvfile.write(str(","))
     csvfile.write(str(y1))
     csvfile.write(str("\n"))    
-    csvfile.write(str("\n"))
+    
     csvfile.write(str(fname4))
-    csvfile.write(str("\n"))
-    csvfile.write(str("\n"))
+
+    csvfile.write(str(","))
     csvfile.write(str(y2))
-    csvfile.write(str("\n"))    
-    csvfile.write(str("\n"))  
+    csvfile.write(str(","))    
+      
     csvfile.write(str(x))
+    
 
 
 
